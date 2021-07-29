@@ -1,0 +1,32 @@
+package StudiIndependent.gits;
+
+import java.util.Scanner;
+
+public class test5 {
+
+    public static void main(String[] args) {
+
+        //palindrome
+
+        String notPalindrome = "";
+
+
+        Scanner dataInput = new Scanner(System.in);
+
+        System.out.println("Text here: ");
+
+        String palindrome = dataInput.nextLine();
+        int length = palindrome.length();
+
+        for (int index = length - 1; index >= 0; index--) {
+            notPalindrome = notPalindrome + palindrome.charAt(index);
+
+        }
+
+        if (palindrome.equals(notPalindrome)) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+    }
+}
