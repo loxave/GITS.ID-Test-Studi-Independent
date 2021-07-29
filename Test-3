@@ -1,0 +1,31 @@
+package StudiIndependent.gits;
+
+import java.util.Scanner;
+
+public class test3 {
+
+    public static void main(String[] args) {
+
+        Scanner timeConversion = new Scanner(System.in);
+
+        System.out.println("Time Conversion: ");
+        String tConvert = timeConversion.nextLine();
+
+        System.out.println(timeConvert(tConvert));
+
+    }
+
+    private static String timeConvert(String time) {
+
+        String s = "";
+        if (time.substring(0, 2).equals("12") && s.contains("AM")) {
+            s = Integer.toString(Integer.parseInt(s.substring(0, 2)) + 12);
+            time = s + time.substring(2, time.length());
+        }
+        if (time.substring(0, 2).equals("12") && s.contains("PM")) {
+            s = "00";
+            time = s + time.substring(2, time.length());
+        }
+        return time.substring(0, time.length() - 2);
+    }
+}
